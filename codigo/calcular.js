@@ -14,5 +14,10 @@ function calcular() {
 
     }
 
+    if (viajes=="pereira"){
+
+        total=2000*4
+    }
+
 
 }
