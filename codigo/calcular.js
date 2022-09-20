@@ -4,36 +4,32 @@ function   calcular() {
     let viajes = document.getElementById("viajes").value;
     let pasajeros =Number( document.getElementById("pasajeros").value)
     let maletas=Number(document.getElementById("peso").value)
-    let tipoSilla = document.getElementById("silla").value;
+    let tipoSilla = document.getElementById("tipoDeSilla").value;
     let total = 0;
     let pesoAdicional=0;
     let totalSilla = 0;
-    total = viajes * pasajeros;
+    let viajeTotal=0;
+    
     if (viajes == 1) {
 
-       total=100000*pasajeros
-       mostrar.innerHTML = "el total del pasaje es :" + total;
-      
-       
-        
+       total=300000*pasajeros
     }
     salida=total;
     if (viajes==2){
 
         total=200000*pasajeros
-        mostrar.innerHTML="el total del pasaje es: "+total;
     }
 
     if (viajes==3){
 
         total=250000*pasajeros
-        mostrar.innerHTML="el total del pasaje es: "+total;
+       
     }
 
     if (viajes==4){
 
         total=180000*pasajeros
-        mostrar.innerHTML="el total del pasaje es: "+total;
+        
     }
 
     if(maletas>50){
@@ -42,12 +38,14 @@ pesoAdicional=(maletas-50)*15000
     }
     // Tipo de silla
   if (tipoSilla == "Normal") {
-    totalSilla = 0 * pasajeros;
+    totalSilla = 0 ;
   }
   if (tipoSilla == "Ejecutiva") {
-    totalSilla = 20000 * pasajeros;
+    totalSilla = 20000 ;
   }
-  if (tipoSilla == "VIP") {
-    totalSilla = 40000 * pasajeros;
+  if (tipoSilla == "Vip") {
+    totalSilla = 40000 ;
     }
+    viajeTotal = total+pesoAdicional+totalSilla;
+    mostrar.innerHTML= `FACTURA DE VIAJE<br> <br>Ciudad de destino: ${viajes}<br>Personas que viajan: ${pasajeros}<br>Peso de las maletas: ${maletas}<br>Tipo de sillas: ${tipoSilla}<br>Precio del viaje: ${total}<br>Precio adicional por maletas: ${pesoAdicional}<br>Precio de las sillas: ${totalSilla}<br>El total a pagar por el vuelo es: ${viajeTotal}`;
 }

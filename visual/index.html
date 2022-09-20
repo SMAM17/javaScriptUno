@@ -17,7 +17,7 @@
     <nav class="navbar" style="color: rgb(250, 250, 250); background-color: rgb(244, 12, 0);">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
-            <img src="/pictures/png/logo2.png"  alt="Bootstrap" width="50" height="60"> <p style="color:white ;">SUPERFLIGHT</p>
+            <img src="/pictures/png/logo2.png"  alt="Bootstrap" width="50" height="60"> <h1 style="color:white ;">SUPERFLIGHT</h1>
             
           </a>
           
@@ -50,17 +50,27 @@
 </div>
 <div class="col-6">
   <div>
-    <label for="text"  >Pasajeros</label>
-   <input type="text" name="pasajeros" id="pasajeros" placeholder="NumeroDePasajeros">
+    <label for="text" style="background-color:red ; border-radius: 20px; " >Pasajeros</label>
+   <input type="text" name="pasajeros" id="pasajeros" placeholder="NumeroDePasajeros" style="margin-bottom:  20px; ;">
+   </div>
+   <div>
+<label for="text" style="background-color:red ; border-radius:20px; ; " >Tipo de silla</label>
+
+<select name="" id="tipoDeSilla" style="margin-bottom: 20px; ;">
+  <option value="Normal">Normal</option>
+  <option value="Ejecutiva">Ejecutiva</option>
+  <option value="Vip">Vip</option>
+</select>
    </div>
   
 <div>
-   <label for="text" >Peso de las maletas</label>
-   <input type="text" name="peso" id="peso" placeholder="kg maletas">
+   <label for="text" style="margin-bottom: 20px; background-color:red ;  border-radius:20px; ">Peso de las maletas</label>
+   <input type="text" name="peso" id="peso" placeholder="kg maletas" style="margin-bottom:20px; ">
   </div>
- <button type="submit" value="calcular" onclick="calcular()">enviar</button>
+ <button type="submit" value="calcular" onclick="calcular()" style="background-color:green ; border-bottom:20px; ;">enviar</button>
+ <div id="respuesta"></div>
   </div>
-  <div id="respuesta"></div>
+  
 </div>
 
 
