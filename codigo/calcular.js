@@ -31,6 +31,11 @@ function   calcular() {
         total=180000*pasajeros
         
     }
+    if (viajes==5){
+
+      total=90000*pasajeros
+      
+  }
 
     if(maletas>50){
 pesoAdicional=(maletas-50)*15000
